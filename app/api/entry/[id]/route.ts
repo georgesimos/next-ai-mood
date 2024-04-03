@@ -1,4 +1,4 @@
-// import { update } from "@/utils/actions"
+import { update } from "@/utils/actions"
 import { analyzeEntry } from "@/utils/ai"
 import { getUserFromClerkID } from "@/utils/auth"
 import { prisma } from "@/utils/db"
@@ -19,7 +19,7 @@ export const DELETE = async (
     },
   })
 
-  // update(["/journal"])
+  update(["/journal"])
 
   return NextResponse.json({ data: { id: params.id } })
 }
@@ -54,7 +54,7 @@ export const PATCH = async (
     },
   })
 
-  // update(["/journal"])
+  update(["/journal"])
 
   return NextResponse.json({ data: { ...entry, analysis: savedAnalysis } })
 }

@@ -19,7 +19,11 @@ const getEntry = async (id: string) => {
   return entry
 }
 
-const JournalEditorPage = async ({ params }: { params: { id: string } }) => {
+export default async function JournalEditorPage({
+  params,
+}: {
+  params: { id: string }
+}) {
   const entry = await getEntry(params.id)
 
   return (
@@ -28,5 +32,3 @@ const JournalEditorPage = async ({ params }: { params: { id: string } }) => {
     </div>
   )
 }
-
-export default JournalEditorPage

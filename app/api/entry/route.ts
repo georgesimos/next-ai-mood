@@ -1,4 +1,4 @@
-// import { update } from "@/utils/actions"
+import { update } from "@/utils/actions"
 import { getUserFromClerkID } from "@/utils/auth"
 import { prisma } from "@/utils/db"
 import { NextResponse } from "next/server"
@@ -28,7 +28,7 @@ export const POST = async (request: Request) => {
     },
   })
 
-  // update(["/journal"])
+  update(["/journal"])
 
   return NextResponse.json({ data: entry })
 }
